@@ -1,0 +1,25 @@
+ //Função para busca binária
+        public void buscaBinaria(int valor)
+        {
+            int menor=0;
+            int maior=tamanhoArray-1;
+            while(menor<=maior)
+            {
+                int meio =(menor+maior)/2;
+                if(array[meio]<valor)
+                {
+                    menor=meio+1;
+                }
+                else if(array[meio]>valor)
+                {
+                    maior=meio-1;
+                }
+                else
+                {
+                    System.out.println(("Encontramos o valor "+ valor+" na posição "+ meio));
+                    return;
+                }
+            }
+            System.out.println("Valor "+ valor+" não encontrado");
+            return;
+        }
