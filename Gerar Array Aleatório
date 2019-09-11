@@ -1,0 +1,38 @@
+public class Estrutura
+    {
+        //Define um array com tamanho máximo de 20 elementos
+        private int[] array = new int[20];
+        //Define o tamanho que queremos para o array
+        private int tamanhoArray=10;
+
+        //Função para gerar aleatóriamente o array de acordo com o tamanho definido
+        public void gerarArray(){
+            for(int i=0;i<tamanhoArray;i++)
+            {
+                //Atribuímos aleatóriamente um número de 0 a 9
+                array[i]=(int)(Math.random()*10);
+            }
+        }
+
+        //Função para imprimir um array de tamanho definido
+        public void imprimirArray()
+        {
+            System.out.println("----------");
+
+            for(int i=0; i<tamanhoArray;i++)
+            {
+                System.out.print("| " + i + " | ");
+                System.out.println(array[i]+ " |");
+                System.out.println("----------");
+            }
+        }
+
+        public static void main(String[] args) {
+
+            Estrutura novoArray= new Estrutura();
+
+            novoArray.gerarArray();
+
+            novoArray.imprimirArray();
+        }
+    }
