@@ -1,0 +1,23 @@
+public void selectionSort()
+        {
+            System.out.println("Ordenação com SelectionSort");
+            
+            //Ordenação ordem ascendente
+            for(int i=0; i<tamanhoArray;i++)
+            {
+                int minimo=i;
+                {
+                    for(int j=i;j<tamanhoArray;j++)
+                    {
+                        //Se quisermos ordem descendente, trocar condição para <
+                        if(array[minimo]>array[j])
+                        {
+                            minimo=j;
+                        }
+                    }
+                    trocarValores(i, minimo);
+                    System.out.println("Troca Efetuada");
+                    imprimirArray();
+                }
+            }
+        }
