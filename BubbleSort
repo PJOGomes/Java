@@ -1,0 +1,29 @@
+//Função auxiliar para troca de valores de dois valores de um array
+        public void trocarValores(int primeiro, int segundo)
+        {
+            int temp=array[primeiro];
+            array[primeiro]=array[segundo];
+            array[segundo]=temp;
+
+        }
+
+        //Função para o BubbleSort
+        public void bubbleSort()
+        {
+            System.out.println("Utilização BubbleSort");
+            
+            for(int i=tamanhoArray-1;i>1;i--)
+            {
+                for(int j=0;j<i;j++)
+                {
+                    if(array[j]>array[j+1])
+                    {
+                        trocarValores(j,j+1);
+                        
+                        //Para indicarmos que foi feita uma troca e verificarmos quew troca foi feita
+                        System.out.println("Troca Efetuada");
+                        imprimirArray();
+                    }
+                }
+            }
+        }
